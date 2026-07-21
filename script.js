@@ -1,5 +1,9 @@
 const canvas=document.getElementById("game");
+const startButton=document.getElementById("start-button");
 
+const proceedButton=document.getElementById("proceed-button");
+
+let gameStarted=false;
 const ctx=canvas.getContext("2d");
 
 
