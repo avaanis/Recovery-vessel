@@ -1,103 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ORBITAL RECOVERY</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
-
 <body>
+<div class="starfield" id="starfield"></div>
 
 <div class="terminal">
 
-<p class="small">
-UNION ARCHIVE TERMINAL v3.1
-</p>
+  <div class="terminal-header">
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <span class="corner bl"></span>
+    <span class="corner br"></span>
 
-<p>
-> CONNECTION ESTABLISHED
-</p>
+    <p class="small">
+      UNION ARCHIVE TERMINAL v3.1
+    </p>
+    <p>
+      &gt; CONNECTION ESTABLISHED
+    </p>
+    <p>
+      &gt; RECOVERY PROTOCOL INITIATED
+    </p>
 
-<p>
-> RECOVERY PROTOCOL INITIATED
-</p>
+    <hr>
 
-<hr>
+    <h1>ORBITAL RECOVERY</h1>
 
+    <p class="red">
+      CLASSIFICATION: THIRD COMM INTERNAL
+    </p>
 
-<h1>
-ORBITAL RECOVERY
-</h1>
+    <p>
+      A scattered transmission has been detected.
+    </p>
+    <p>
+      19 data fragments are missing from the archive.
+    </p>
+    <p>
+      Recover all fragments to restore final access.
+    </p>
 
+    <hr>
 
-<p class="red">
-CLASSIFICATION: THIRD COMM INTERNAL
-</p>
+    <div id="status">
+      DATA CORES RECOVERED:
+      <span id="score">0</span>/19
+    </div>
 
+    <button id="start-button">BEGIN MISSION</button>
 
-<p>
-A scattered transmission has been detected.
-</p>
+    <div class="canvas-wrap">
+      <canvas id="game" style="display:none;"></canvas>
+    </div>
 
-<p>
-19 data fragments are missing from the archive.
-</p>
+    <button id="proceed-button" style="display:none;">PROCEED</button>
 
-<p>
-Recover all fragments to restore final access.
-</p>
+    <p class="controls">
+      CONTROLS:
+      <br>
+      &larr; &rarr; OR A/D TO MOVE
+    </p>
 
-
-<hr>
-
-
-<div id="status">
-
-DATA CORES RECOVERED:
-
-<span id="score">
-0
-</span>
-/19
-
+    <div id="message"></div>
+  </div>
 </div>
-
-
-<button id="start-button">
-BEGIN MISSION
-</button>
-
-<canvas id="game" style="display:none;"></canvas>
-
-<button id="proceed-button" style="display:none;">
-PROCEED
-</button>
-
-<p class="controls">
-
-CONTROLS:
-<br>
-← → OR A/D TO MOVE
-
-</p>
-
-
-<div id="message">
-
-</div>
-
-
-</div>
-
 
 <script src="script.js"></script>
-
 </body>
-
 </html>
